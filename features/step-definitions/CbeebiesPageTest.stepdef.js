@@ -10,13 +10,20 @@ BeforeAll(function () {
     browser.url('/');
     expect(browser.getUrl()).equals(`${browser.options.baseUrl}`);
 })
+// it('go to CBeebiesPage', () => {
 Given(/^go to CBeebiesPage$/, function () {
+    // homePageObject.loadHomePage();
+    // homePageObject.moreDropdown();
     bitesizePageObject.listOfMainNavMenu();
     threebbcPage.MoreLink.click();
     threebbcPage.hiddenlist;
+    // browser.pause(2000);
     threebbcPage.moveToElement(threebbcPage.MoreLink);
+    // browser.pause(2000);
     threebbcPage.moveToElement(threebbcPage.childLinkDiv);
+    // browser.pause(2000);
     CBeebiesPageObject.CBeebiesPageOpen();
+    // browser.pause(2000);
     CBeebiesPageObject.buttonsOnCbeebiesPage();
     browser.pause(2000);
     expect(browser.getUrl()).to.equal('https://www.bbc.co.uk/cbeebies/games/jojo-and-gran-gran-parcel-surprise-game');
@@ -25,6 +32,7 @@ Given(/^go to CBeebiesPage$/, function () {
 })
 
 When(/^fetch text of all the anchor tags with async and sync actions$/, function () {
+    // it('fetch text of all the anchor tags with async and sync actions', () => {
     CBeebiesPageObject.syncasyncactions();
     CBeebiesPageObject.forBreakLoop();
 });

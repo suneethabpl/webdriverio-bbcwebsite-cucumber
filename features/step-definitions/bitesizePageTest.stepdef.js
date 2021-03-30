@@ -1,8 +1,15 @@
+// import bitesizePageObject from "../pageObjects/bitesizePageObject"
+// const bitesize = new bitesizePageObject();
+
 
 const { Given, When, Then } = require('@cucumber/cucumber');
 const {BeforeAll} = require('@cucumber/cucumber');
 const threebbcPage  = require("../pageobjects/threebbcPageObjects");
 const bitesizePageObject =require('../pageobjects/bitesizePageObject');
+// constthreebbcPage  = new threebbcPage();
+
+// import { expect,assert } from 'chai';
+// import 'chai/register-should';
 const expect = require('chai').expect;
 
     BeforeAll(function () {
@@ -16,8 +23,20 @@ const expect = require('chai').expect;
        threebbcPage.moveToElement(threebbcPage.MoreLink);
        threebbcPage.moveToElement(threebbcPage.childLinkDiv);
        browser.pause(3000)
+        //threebbcPage .ThreePage.moveTo();
+//    threebbcPage.moveToElement(bitesizePageObject.BitesizePageOpen());
+        // threebbcPage.moveToElement(threebbcPage.bitesizePageObject.BitesizePageOpen());
+
+     
     bitesizePageObject.BitesizePageOpen();
     browser.pause(3000)
+    // bitesizePageObject.BitesizePageOpen();
+    // threebbcPage.moveToElement(bitesizePageObject.BitesizePageOpen());
+    // bitesizePageObject.BitesizePageOpen().click();
+    // bitesizePageObject.BitesizePageOpen().click();
+
+        // expect((bitesizePageObject.BitesizePageOpen()).getTagName()).to.equal('a');
+    //    threebbcPage.clickElement(bitesizePageObject.BitesizePageOpen());
     })
        When(/^I retreive elements in dropdown list$/, function(){
 
